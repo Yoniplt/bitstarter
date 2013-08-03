@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
-app.use(express.logger());
+var fs = require('fs');
 
+app.use(express.logger());
 
 app.get('/', function(request, response) {
   response.send(fs.readFileSynce(Index.html).ToString());
